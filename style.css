@@ -96,10 +96,17 @@ footer.site {
 .stat .label { color: var(--ink-soft); font-size: 0.85rem; font-style: italic; }
 
 table { width: 100%; border-collapse: collapse; margin: 4px 0 8px; }
-th, td { text-align: left; padding: 10px 16px 10px 0; border-bottom: 1px solid var(--line); font-size: 0.97rem; }
+th, td { text-align: left; padding: 10px 16px 10px 0; border-bottom: 1px solid var(--line); font-size: 0.97rem; white-space: nowrap; }
 th { color: var(--ink-soft); font-weight: 500; font-style: italic; font-size: 0.9rem; }
 td { color: var(--ink); }
 tr:last-child th, tr:last-child td { border-bottom: none; }
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 4px 0 8px;
+}
+.table-scroll table { margin: 0; }
 
 .phase { border-left: 1px solid var(--clay); padding: 4px 0 4px 22px; margin-bottom: 24px; }
 .phase .phase-num { color: var(--clay); font-size: 0.88rem; font-style: italic; margin-bottom: 4px; }
@@ -126,6 +133,9 @@ details p, details table { font-size: 0.93rem; }
 }
 
 @media (max-width: 520px) {
+  .wrap { padding: 0 18px; }
   .stat-row { gap: 28px; }
   header.site nav .links a { margin-left: 14px; }
+  th, td { padding: 8px 12px 8px 0; font-size: 0.88rem; }
+  .table-scroll { margin-left: -18px; margin-right: -18px; padding: 0 18px; }
 }
