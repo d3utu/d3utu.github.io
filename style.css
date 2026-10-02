@@ -132,6 +132,11 @@ details p, details table { font-size: 0.93rem; }
   margin: 18px 0;
 }
 
+.notes-log { display: flex; flex-direction: column; gap: 22px; }
+.note-entry { border-left: 1px solid var(--clay); padding: 4px 0 4px 22px; }
+.note-entry .note-date { color: var(--clay); font-size: 0.88rem; font-style: italic; margin: 0 0 6px; }
+.note-entry p:last-child { margin: 0; color: var(--ink); }
+
 @media (max-width: 520px) {
   .wrap { padding: 0 18px; }
   .stat-row { gap: 28px; }
